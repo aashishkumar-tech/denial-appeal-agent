@@ -1,0 +1,31 @@
+# Normalise line endings so Windows and Linux/macOS machines don't create noisy diffs.
+* text=auto eol=lf
+
+# Shell scripts must stay LF (they break with CRLF)
+*.sh        text eol=lf
+*.bash      text eol=lf
+Dockerfile* text eol=lf
+*.yaml      text eol=lf
+*.yml       text eol=lf
+
+# Windows-only scripts keep CRLF
+*.ps1       text eol=crlf
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+
+# Binary files: never convert
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.tiff      binary
+*.pdf       binary
+*.zip       binary
+*.gz        binary
+*.pkl       binary
+*.joblib    binary
+*.parquet   binary
+
+# Generated files: collapse in pull request diffs
+package-lock.json   linguist-generated=true
+poetry.lock         linguist-generated=true
+uv.lock             linguist-generated=true

@@ -1,0 +1,48 @@
+# CODEOWNERS
+
+# Auto-assigns the right reviewer when a pull request touches these paths
+
+#
+
+# Dev A = Data & AI Engineer          -> aashishkumar-tech
+
+# Dev B = Platform & App Engineer     -> gyanendra0
+
+#
+
+# Later rules override earlier ones. Last match wins
+
+# Default: both review anything not listed below
+
+*                   aashishkumar-tech gyanendra0
+
+# ---------- Dev A: data, ML, AI ----------
+
+/src/ingest/        aashishkumar-tech
+/src/synth/         aashishkumar-tech
+/src/rules/         aashishkumar-tech
+/src/ml/            aashishkumar-tech
+/src/llm/           aashishkumar-tech
+/src/extraction/    aashishkumar-tech
+/src/rag/           aashishkumar-tech
+/src/agent/         aashishkumar-tech
+/pipelines/         aashishkumar-tech
+/config/            aashishkumar-tech
+
+# ---------- Dev B: platform, API, frontend ----------
+
+/src/api/           gyanendra0
+/frontend/          gyanendra0
+/deploy/            gyanendra0
+/.github/           gyanendra0
+/docker-compose.yml gyanendra0
+/Dockerfile*        gyanendra0
+
+# ---------- Shared: both must review ----------
+
+/src/db/            aashishkumar-tech gyanendra0
+/docs/              aashishkumar-tech gyanendra0
+/tests/             aashishkumar-tech gyanendra0
+/README.md          aashishkumar-tech gyanendra0
+/requirements.txt   aashishkumar-tech gyanendra0
+/pyproject.toml     aashishkumar-tech gyanendra0
